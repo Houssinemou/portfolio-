@@ -4,10 +4,10 @@
 const CLOUDINARY_CLOUD = 'dldyy8dwj'; // À remplacer après creation compte Cloudinary
 
 export const VIDEO_URLS = {
-  POD_LAST: `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/video/upload/POD-last_w33o6x`,
-  PFE_DEMO: `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/video/upload/Enregistrement_2026-04-23_151745_poqdun`,
-  SALES_SYSTEM: `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/video/upload/Enregistrement_2026-04-21_235452_w57kad`,
-  ECOMMERCE_DEMO: `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/video/upload/Enregistrement_2026-04-22_002025_zu1kv0`,
+  POD_LAST: 'https://res.cloudinary.com/dldyy8dwj/video/upload/v1776906707/POD-last_w33o6x.mp4',
+  PFE_DEMO: 'https://res.cloudinary.com/dldyy8dwj/video/upload/v1776953899/Enregistrement_2026-04-23_151745_poqdun.mp4',
+  SALES_SYSTEM: 'https://res.cloudinary.com/dldyy8dwj/video/upload/v1776906609/Enregistrement_2026-04-21_235452_w57kad.mp4',
+  ECOMMERCE_DEMO: 'https://res.cloudinary.com/dldyy8dwj/video/upload/v1776906585/Enregistrement_2026-04-22_002025_zu1kv0.mp4',
 };
 
 // Fallback URLs (pour développement local)
