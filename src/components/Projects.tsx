@@ -125,12 +125,12 @@ const Projects: React.FC = () => {
                 loop
                 muted
                 playsInline
-                src="Enregistrement 2026-04-22 002025.mp4"
+                src="/Enregistrement 2026-04-22 002025.mp4"
               />
             </div>
             <button
               className={styles.expandFeaturedBtn}
-              onClick={() => setExpandedVideo('Enregistrement 2026-04-22 002025.mp4')}
+              onClick={() => setExpandedVideo('/Enregistrement 2026-04-22 002025.mp4')}
               aria-label="Agrandir la vidéo"
             >
               <Maximize2 size={20} />
