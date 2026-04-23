@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { Maximize2, X } from 'lucide-react';
 import styles from './Projects.module.css';
+import { getVideoUrl } from '../config/videos';
 
 const Projects: React.FC = () => {
   const [expandedVideo, setExpandedVideo] = useState<string | null>(null);
+  
+  const videoUrls = {
+    pod: getVideoUrl('POD_LAST'),
+    pfe: getVideoUrl('PFE_DEMO'),
+    sales: getVideoUrl('SALES_SYSTEM'),
+    ecommerce: getVideoUrl('ECOMMERCE_DEMO'),
+  };
+  
   return (
     <section className={styles.projectsSection}>
       <div className="container">
@@ -34,12 +43,12 @@ const Projects: React.FC = () => {
               loop
               muted
               playsInline
-              src="/POD-last.mp4"
+              src={videoUrls.pod}
               poster="https://placehold.co/300x600/0A0F1D/FFFFFF?text=Logistique"
             />
             <button
               className={styles.expandFeaturedBtn}
-              onClick={() => setExpandedVideo('/POD-last.mp4')}
+              onClick={() => setExpandedVideo(videoUrls.pod)}
               aria-label="Agrandir la vidéo"
             >
               <Maximize2 size={20} />
@@ -69,12 +78,12 @@ const Projects: React.FC = () => {
                 loop
                 muted
                 playsInline
-                src="/Enregistrement 2025-07-01 153807.mp4"
+                src={videoUrls.pfe}
                 poster="https://placehold.co/600x400/0A0F1D/FFFFFF?text=Vidéo+de+Démonstration"
               />
               <button
                 className={styles.expandButton}
-                onClick={() => setExpandedVideo('/Enregistrement 2025-07-01 153807.mp4')}
+                onClick={() => setExpandedVideo(videoUrls.pfe)}
                 aria-label="Agrandir la vidéo"
               >
                 <Maximize2 size={20} />
@@ -103,11 +112,11 @@ const Projects: React.FC = () => {
                 loop
                 muted
                 playsInline
-                src="/Enregistrement 2026-04-21 235452.mp4"
+                src={videoUrls.sales}
               />
               <button
                 className={styles.expandButton}
-                onClick={() => setExpandedVideo('/Enregistrement 2026-04-21 235452.mp4')}
+                onClick={() => setExpandedVideo(videoUrls.sales)}
                 aria-label="Agrandir la vidéo"
               >
                 <Maximize2 size={20} />
@@ -125,12 +134,12 @@ const Projects: React.FC = () => {
                 loop
                 muted
                 playsInline
-                src="/Enregistrement 2026-04-22 002025.mp4"
+                src={videoUrls.ecommerce}
               />
             </div>
             <button
               className={styles.expandFeaturedBtn}
-              onClick={() => setExpandedVideo('/Enregistrement 2026-04-22 002025.mp4')}
+              onClick={() => setExpandedVideo(videoUrls.ecommerce)}
               aria-label="Agrandir la vidéo"
             >
               <Maximize2 size={20} />

@@ -1,9 +1,9 @@
 {
-  "buildCommand": "git lfs pull && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
   "env": {
     "NODE_VERSION": "18.x"
   },
-  "installCommand": "git lfs install && npm install"
+  "installCommand": "npm install"
 }
