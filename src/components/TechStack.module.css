@@ -1,0 +1,135 @@
+.techSection {
+  padding: var(--space-xl) 0;
+  position: relative;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--text-primary);
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+  /* Make sure it sits above backgrounds if any */
+  position: relative;
+  z-index: 10;
+}
+
+.bentoCard {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Specific Panel Spans to mimic Bento box */
+.cardBackendJava {
+  grid-column: span 1;
+  border-top-color: rgba(245, 130, 32, 0.4); /* color-java */
+}
+
+.cardBackendNet {
+  grid-column: span 1;
+  border-top-color: rgba(81, 43, 212, 0.4); /* color-net */
+}
+
+.cardWebFront {
+  grid-column: span 1;
+  border-top-color: rgba(221, 0, 49, 0.4); /* color-angular */
+}
+
+.cardMobile {
+  grid-column: span 1;
+  border-top-color: rgba(2, 86, 155, 0.4); /* color-flutter */
+}
+
+.cardWordPress {
+  grid-column: span 1;
+  border-top-color: rgba(33, 117, 155, 0.4); /* color-wordpress */
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cardBackendJava .iconWrapper { color: var(--color-java); border: 1px solid rgba(245, 130, 32, 0.2); }
+.cardBackendNet .iconWrapper { color: var(--color-net); border: 1px solid rgba(81, 43, 212, 0.2); }
+.cardWebFront .iconWrapper { color: var(--color-angular); border: 1px solid rgba(221, 0, 49, 0.2); }
+.cardMobile .iconWrapper { color: var(--color-flutter); border: 1px solid rgba(2, 86, 155, 0.2); }
+.cardWordPress .iconWrapper { color: #2175a7; border: 1px solid rgba(33, 117, 155, 0.2); }
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cardDesc {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* Glow effects in background of cards */
+.glowBlob {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  bottom: -50px;
+  right: -50px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.bentoCard:hover .glowBlob {
+  opacity: 0.3;
+}
+
+.cardBackendJava .glowBlob { background: var(--color-java); }
+.cardBackendNet .glowBlob { background: var(--color-net); }
+.cardWebFront .glowBlob { background: var(--color-angular); }
+.cardMobile .glowBlob { background: var(--color-flutter); }
+.cardWordPress .glowBlob { background: #2175a7; }
+
+@media (max-width: 1200px) {
+  .bentoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .bentoCard {
+    grid-column: span 1 !important;
+  }
+}
