@@ -1,7 +1,5 @@
 // Configuration des URLs vidéo
-// Remplace les URLs par tes URLs Cloudinary une fois créé le compte
-
-const CLOUDINARY_CLOUD = 'dldyy8dwj'; // À remplacer après creation compte Cloudinary
+// URLs Cloudinary pour la production
 
 export const VIDEO_URLS = {
   POD_LAST: 'https://res.cloudinary.com/dldyy8dwj/video/upload/v1776906707/POD-last_w33o6x.mp4',
