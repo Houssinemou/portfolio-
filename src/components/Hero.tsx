@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import ProfileCard from './ProfileCard';
-import profileImage from '../assets/CV_IMAGE.jpg';
+import profileImage from '../assets/Gemini_Generated_Image_87c30r87c30r87c3.png';
+import cvFile from '../assets/MOURAM ELHOUSSINE.pdf';
 
 const Hero: React.FC = () => {
   const handleContactClick = () => {
@@ -42,7 +43,7 @@ const Hero: React.FC = () => {
           <p className={styles.subtitle}>
             Ingénieur Infomatique | Applications Web & Mobile
           </p>
-          <a href="/MOURAM ELHOUSSINE CV.pdf.pdf" download className={styles.uploadBtn}>
+          <a href={cvFile} download className={styles.uploadBtn}>
             Télécharger le CV
           </a>
         </div>
